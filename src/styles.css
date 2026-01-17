@@ -1,3 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+@theme {
+    /* Define Brand Colors */
+    --color-eternity: #1C4D8D;
+    --color-eternity-light: #3459b6;
+    --color-eternity-dark: #0F2854;
+    --color-eternity-bg: #F2F9FF;
+    --color-heading: #161E54;
+    --color-eternity-dark-blue:#162456;
+    
+    /* Define Custom Animation */
+    --animate-blink: blink 3s infinite;
+
+    @keyframes blink {
+        0%, 100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.6); }
+        50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); border-color: #ffffff; }
+    }
+}
+
+@layer base {
+    .common-color {
+        @apply text-eternity;
+    }
+    .common-btn {
+        @apply bg-eternity text-white p-3 transition-all rounded-3xl shadow-black shadow-sm cursor-pointer hover:bg-eternity-light;
+    }
+    .active {
+        @apply text-eternity-dark font-bold;
+    }
+    .light-color {
+        @apply bg-eternity-bg;
+    }
+    .light-text {
+        @apply text-[#18398c]; 
+    }
+    .heading-color {
+        @apply text-heading;
+    }
+    .deep-bg {
+        @apply bg-eternity;
+    }
+    .native-bg {
+        @apply bg-[#3359B5];
+    }
+}

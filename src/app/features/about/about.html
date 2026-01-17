@@ -1,0 +1,128 @@
+<section class="min-h-screen baba-linear overflow-hidden ">
+    
+    <!-- Hero Section -->
+    <header class="relative bg-linear-to-br from-indigo-900 via-blue-900 to-slate-900 text-white py-24 sm:py-32 px-6 sm:px-10 lg:px-16 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 w-125 h-125 bg-blue-500/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-125 h-125 bg-indigo-500/20 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+
+        <div class="relative max-w-7xl mx-auto text-center z-10">
+            <span class="inline-block py-2 px-4 rounded-full bg-blue-500/10 border border-blue-400/30 backdrop-blur-md text-blue-300 font-semibold text-sm mb-6 tracking-wider">
+                ABOUT US
+            </span>
+            <h1 class="text-3xl sm:text-6xl font-bold bg-clip-text text-transparent bg-linear-to-r from-white via-blue-100 to-indigo-200 mb-6 leading-tight">
+                Architecting the Digital <br/> Future
+            </h1>
+            <p class="text-lg sm:text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
+                We are a collective of visionaries, engineers, and creatives dedicated to building software that stands the test of time. At <span class="text-white font-semibold">இEternity</span>, we don't just write code; we craft legacies.
+            </p>
+        </div>
+    </header>
+
+    <!-- Stats Section (Floating) -->
+    <div class="relative max-w-7xl mx-auto px-6 -mt-16 z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            @for (stat of stats; track stat.label) {
+                <div class="bg-white p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center text-center border border-gray-100 hover:transform hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="text-3xl sm:text-4xl font-bold text-eternity mb-2">{{ stat.value }}</h3>
+                    <p class="text-gray-500 font-medium text-sm">{{ stat.label }}</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-24">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="w-full lg:w-1/2 relative">
+                <div class="absolute inset-0 bg-eternity rounded-3xl rotate-3 opacity-10"></div>
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                     alt="Our Team" 
+                     class="relative w-full rounded-3xl shadow-2xl object-cover h-125">
+            </div>
+            <div class="w-full lg:w-1/2">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-6 relative inline-block">
+                    Our Story
+                    <span class="absolute bottom-0 left-0 w-full h-2 bg-blue-100 -z-10 translate-y-1"></span>
+                </h2>
+                <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+                    <p>
+                        Founded with a simple yet ambitious belief: software should be limitless. What started as a small team of passionate developers has grown into a global technology partner for forward-thinking enterprises.
+                    </p>
+                    <p>
+                        Our journey is defined by our relentless pursuit of perfection. We seamlessly blend aesthetic design with robust engineering to create digital experiences that not only work beautifully but also feel intuitive and human.
+                    </p>
+                    <p>
+                        Today, we continue to push boundaries, helping businesses transform complex challenges into elegant, automated, and scalable solutions.
+                    </p>
+                </div>
+                <div class="mt-8">
+                     <button class="bg-[#1C4D8D] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-[#3459b6] hover:shadow-xl transition-all duration-300 flex items-center gap-2">
+                        Meet the Team <i class="pi pi-arrow-right"></i>
+                     </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="bg-slate-50 py-24 px-6 sm:px-10 lg:px-16 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800">Driven by Purpose</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Our guiding principles that steer every decision we make.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mission -->
+                <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-100 transition-colors"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 text-xl">
+                            <i class="pi pi-compass"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Our Mission</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            To empower businesses with software that adapts, evolves, and endures. We aim to bridge the gap between human potential and digital capability, making technology an enabler of growth, not a barrier.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vision -->
+                <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-indigo-100 transition-colors"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6 text-xl">
+                            <i class="pi pi-eye"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Our Vision</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            To be the global benchmark for sustainable software engineering. We envision a future where digital systems are as reliable as they are revolutionary, creating a legacy of innovation that lasts forever.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Values -->
+    <section class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-24 why-choose-us">
+        <div class="text-center mb-16">
+            <span class="text-blue-600 font-semibold tracking-wider text-sm uppercase">Why Choose Us</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mt-2">The Eternity Difference</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            @for(val of values; track val.title) {
+                <div class="p-8 rounded-3xl bg-white border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                    <div [class]="'w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-xl ' + val.color">
+                        <i [class]="val.icon"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">{{ val.title }}</h3>
+                    <p class="text-gray-600 leading-relaxed">{{ val.desc }}</p>
+                </div>
+            }
+        </div>
+    </section>
+
+</section>

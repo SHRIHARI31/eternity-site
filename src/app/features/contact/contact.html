@@ -1,0 +1,152 @@
+<section class="min-h-screen bg-slate-50 relative overflow-hidden">
+    <!-- Decorative Background Elements -->
+    <div
+        class="absolute top-0 left-0 w-full h-128 bg-eternity-dark-blue rounded-b-[4rem] z-0">
+    </div>
+    <div
+        class="absolute top-0 right-0 w-125 h-125 bg-blue-500/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 z-0">
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20">
+        <!-- Header -->
+        <div class="text-center mb-16 text-white">
+            <span
+                class="inline-block py-2 px-4 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-blue-200 font-semibold text-sm mb-6 tracking-wider">
+                CONTACT US
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-bold mb-6 leading-tight">
+                Let's Build the <span class="text-blue-300">Future</span> Together
+            </h1>
+            <p class="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
+                Whether you have a groundbreaking idea or need technical expertise, we are ready to bring your vision to
+                life.
+            </p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+
+            <!-- Contact Info (Left) -->
+            <div class="lg:col-span-5 space-y-8">
+                <!-- Info Card -->
+                <div class="bg-white/90 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-white/50">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Get in Touch</h3>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-xl shrink-0">
+                                <i class="pi pi-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800">Email Us</h4>
+                                <p class="text-gray-600 mt-1">hello@eternity.com</p>
+                                <p class="text-gray-500 text-sm">Response within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 text-xl shrink-0">
+                                <i class="pi pi-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800">Call Us</h4>
+                                <p class="text-gray-600 mt-1">+1 (555) 000-0000</p>
+                                <p class="text-gray-500 text-sm">Mon-Fri, 9am - 6pm EST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abstract Visual -->
+                <div
+                    class="relative bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-8 text-white overflow-hidden shadow-2xl h-64 flex flex-col justify-end">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+                    </div>
+                    <div class="relative z-10">
+                        <blockquote class="text-xl font-medium italic mb-4">"Innovation distinguishes between a leader
+                            and a follower."</blockquote>
+                        <cite class="not-italic text-blue-200">– Steve Jobs</cite>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Container (Right) -->
+            <div class="lg:col-span-7">
+                <div class="bg-white rounded-3xl shadow-2xl p-8 sm:p-12 border border-gray-100">
+                    <form [formGroup]="myForm" (ngSubmit)="submitForm()" class="space-y-8">
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Name -->
+                            <div class="space-y-2">
+                                <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider">Your
+                                    Name</label>
+                                <input type="text" placeholder="John Doe"
+                                    class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none text-slate-800 placeholder:text-gray-400">
+                            </div>
+
+                            <!-- Org -->
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-semibold text-gray-700 uppercase tracking-wider">Organization</label>
+                                <input type="text" placeholder="Company Ltd."
+                                    class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none text-slate-800 placeholder:text-gray-400">
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider">Email
+                                Address</label>
+                            <input type="email" placeholder="john@example.com"
+                                class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none text-slate-800 placeholder:text-gray-400">
+                        </div>
+
+                        <!-- Services -->
+                        <div class="space-y-3">
+                            <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider">I'm interested
+                                in</label>
+                            <div class="grid sm:grid-cols-2 gap-3">
+                                @for(item of categories(); track item.id) {
+                                <div class="relative">
+                                    
+                                    <!-- Custom styled radio label mimicking the selection -->
+                                    <!-- Since p-radioButton handles the specialized click, we can wrap it or style adjacent. 
+                                             However, p-radioButton renders its own UI. 
+                                             Let's use a cleaner PrimeNG integration layout.
+                                        -->
+                                    <div
+                                        class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors cursor-pointer">
+                                        <p-radioButton name="service" [value]="item.service" formControlName="service"
+                                            [inputId]="item.id.toString()"></p-radioButton>
+                                        <label [for]="item.id"
+                                            class="cursor-pointer text-gray-700 font-medium capitalize flex-1">{{
+                                            item.service.replace('-', ' ') }}</label>
+                                    </div>
+                                </div>
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="space-y-2">
+                            <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider">Message</label>
+                            <textarea rows="4" placeholder="Tell us about your project..."
+                                class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none text-slate-800 placeholder:text-gray-400 resize-none"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit"
+                            class="w-full bg-eternity-dark-blue hover:bg-eternity-dark-blue/80 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
+                            Send Message
+                            <i class="pi pi-send group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

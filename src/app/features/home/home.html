@@ -1,0 +1,183 @@
+<section class="home mt-10 ">
+    <div class="flex flex-col text-center  space-y-2">
+        <h1 class=" text-slate-500  font-medium uppercase text-sm">We automate, you innovate</h1>
+        <p class="text-xl md:text-5xl  font-semibold heading-color capitalize">இEternity provides software solution <br>
+            and
+            work flow automation
+        </p>
+        <p class="mt-5 text-slate-700 max-sm:text-sm">At Eternity we provide business software solution, providing work
+            flow
+            automation
+            <br> and turn your ideas into digital innovation.
+        </p>
+        <div class="mt-3"><button class="common-btn" routerLink="/" fragment="contact">contact Now</button></div>
+    </div>
+    <div class="text-center mt-5 ">
+        <img src="ehb.jpg" alt="homePage" class="w-[70%] mx-auto">
+    </div>
+    <section class="mt-5 light-color  pt-10 pb-5">
+        <div class="flex flex-col text-center ">
+            <span class="font-semibold light-text">YOUR STRUGGLE, ENDS WITH இEternity</span>
+            <p class="font-semibold text-2xl md:text-3xl mt-5 heading-color">Finding Hard to Having a Reliable Software
+                ?
+            </p>
+            <p class="mt-5 text-slate-700">Growing a business in today economy is not easy, we provide efficient robust
+                and
+                reliable software
+                and work flow <br> automation tools that reduce your production time and increase insights and revenue.
+            </p>
+            <div class="card-holder flex flex-row justify-center mt-8  items-center flex-wrap space-x-5">
+                @for(card of cardData();track card.title){
+                <div class=" card w-87.5 text-center h-100 rounded-lg bg-white p-3 m-2">
+                    <img class="w-full h-fit  rounded-lg " [src]="card.img" [alt]="card.title">
+                    <p class=" common-color font-semibold h-13">{{card.title}}</p>
+                    <p class=" h-20 text-sm text-center  leading-relaxed">{{card.description}} </p>
+                </div>
+                }
+            </div>
+            <p class="mt-5 text-slate-700 ">இEternity engineer the robust and most reliable software by professional
+                TechStack <br>
+                that can expandable and maintainable.</p>
+
+
+        </div>
+        <section class=" md:pl-10 md:pr-10  ">
+            <div class="flex flex-row rounded-2xl bg-white  p-5 md:p-10  flex-wrap justify-between   my-10 ">
+                <p class="text-xl md:text-3xl font-semibold heading-color">இEternity Built on Trust. <br>
+                    Backed by Result.
+                </p>
+
+                <div
+                    class="counter  space-y-4 flex-col md:space-y-0   mt-5 md:mt-0   flex md:flex-row md:justify-between md:space-x-10  md:flex-wrap ">
+                    <div>
+                        <h4 class=" text-2xl md:text-4xl text-start md:text-center font-semibold common-color">20+</h4>
+                        <span class=" text-xl">Project completion</span>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl md:text-4xl  text-start md:text-center font-semibold common-color">1000+
+                        </h4>
+                        <span class="text-xl">Client review</span>
+                    </div>
+                    <div>
+                        <h4 class=" text-2xl md:text-4xl  text-start md:text-center font-semibold common-color">6+</h4>
+                        <span class="text-xl">Productive software</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="mt-5 bg-white  p-5  md:p-25 w-full">
+        <div class="max-w-6xl mx-auto  md:grid md:grid-cols-2 ">
+            <div class="img-div  justify-start">
+                <img src="dtpm.jpg" class="max-sm:hidden  md:max-w-md object-contain  rounded-2xl" alt="howWeWork">
+            </div>
+            <div class="content-div  ">
+                <h4 class="font-semibold text-slate-600">How இEternity Work's ?</h4>
+                <h3 class="font-semibold text-2xl md:text-4xl heading-color">Get Your Requirements — Before the Deadline
+                </h3>
+                <p class="mt-5 md:mt-10 md:text-2xl text-gray-700 leading-relaxed">we promise not just timely delivery,
+                    but early
+                    completion
+                    that gives you breathing room and peace of mind.
+                    Every project, every specification, every tiny detail is handled with precision and urgency so you
+                    always
+                    receive it ahead of schedule. </p>
+                <p class="mt-2 md:mt-5  text-gray-700 md:text-xl leading-relaxed">Our dedicated team works relentlessly,
+                    anticipating
+                    your
+                    needs before you even voice them.
+                    Choose us, and transform last-minute stress into confident early advantage.</p>
+
+                <p class=" mt-2 md:mt-5 text-gray-700 leading-relaxed font-semibold">Because when you partner with us,
+                    your deadline
+                    becomes our
+                    starting line — and we always finish first.</p>
+                <button class="common-btn mt-10" routerLink="/service">know about our Service</button>
+
+            </div>
+        </div>
+    </section>
+    <section class=" light-color p-10  md:p-20 ">
+
+        <div class=" flex flex-col md:flex-row md:flex-wrap md:justify-center  md:space-x-50">
+            <div class="left  ">
+                <h4 class="light-text  font-semibold mb-5">Why Business choose இEternity</h4>
+                <h3 class="text-xl mb-4 md:text-4xl font-semibold heading-color">இEternity never say no to any <br>
+                    software
+                    solutions !</h3>
+
+                <img src="wbto.jpg" class="max-w-2xl mt-5 max-md:hidden  rounded-2xl" alt="leaders">
+
+            </div>
+            <div class="right flex flex-col">
+                <div><span class="md:text-3xl text-green-500">✔</span><span class="md:text-3xl text-white">Web application</span></div>
+                <div><span class="md:text-3xl">✔</span><span class="md:text-3xl text-white">Android application</span>
+                </div>
+                <div><span class="md:text-3xl">✔</span><span class="md:text-3xl text-white">Automation work flow</span>
+                </div>
+                <div><span class="md:text-3xl">✔</span><span class="md:text-3xl text-white">Digital marketing</span>
+                </div>
+                <div><span class="md:text-3xl">✔</span><span class="md:text-3xl text-white">Training</span></div>
+                <div><span class="md:text-3xl">✔</span><span class="md:text-3xl text-white">ERP software</span></div>
+                <div><span class="md:text-3xl">✔</span><span class="md:text-3xl text-white">Projects</span></div>
+            </div>
+        </div>
+
+    </section>
+    <section class="p-5 md:p-10 carousel-holder relative ">
+
+
+
+        <h2 class="text-center common-color text-2xl sm:text-4xl mb-5 font-semibold ">Technology we use</h2>
+        <p class="text-center sm:text-xl light-text mb-5 sm:mb-10  opacity-85">We choose reliability and community
+            support , over
+            popularity
+        </p>
+        <p-carousel [value]="linearTech()" [numVisible]="4" showNavigators="false" [numScroll]="1" [circular]="true"
+            autoplayInterval="3000" [showIndicators]="false" orientation="horizontal" class=""
+            [responsiveOptions]="responsiveOptions">
+
+            <ng-template pTemplate="item" let-item>
+                <div class="tech-box flex justify-center items-center ">
+                    <img [src]="item.img" [alt]="item.alt" class=" w-25 h-25 sm:w-30 sm:h-30  sm:object-contain" />
+                </div>
+
+            </ng-template>
+
+        </p-carousel>
+    </section>
+
+    <section class="customer-review  bg-blue-950 p-5 sm:p-10 border-t-10 border-blue-950">
+        <h1 class="text-center text-3xl md:text-5xl text-white font-semibold">Testimonial</h1>
+        <p class="text-center text-xl md:text-3xl mt-2 text-white opacity-85">The voice of our client's</p>
+
+        <div class="carousel-box">
+
+            <p-carousel [value]="testimonialData()" [numVisible]="3" [numScroll]="3" [circular]="false"
+                [responsiveOptions]="responsiveOptions">
+                <ng-template pTemplate="item" let-item class="">
+                    <div class=" flex justify-center items-center ">
+                        <div
+                            class="sm:max-w-md rounded-2xl card-real flex flex-col mt-10 border border-gray-100  bg-white p-8 shadow-lg">
+                            <p class=" md:text-lg leading-relaxed  md:h-20  text-gray-700 italic">
+                                {{item.quote}}
+                            </p>
+
+                            <div class="mt-6 flex items-center gap-x-4">
+                                <img class="h-12 w-12 rounded-full object-cover" [src]="item.avatar" alt="User">
+                                <div class="">
+                                    <h3 class="text-base font-semibold tracking-tight text-gray-900">{{item.name}}</h3>
+                                    <p class="text-sm leading-6 text-gray-500">{{item.role}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </div>
+    </section>
+    <main id="contact" class="rounded-2xl">
+        <app-contact />
+    </main>
+
+</section>

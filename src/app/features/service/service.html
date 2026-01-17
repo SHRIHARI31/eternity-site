@@ -1,0 +1,418 @@
+<section class="service">
+    <header class="flex justify-center  bg-white p-5 rounded-xl ">
+        <div class="bg-black w-full rounded-xl h-120 relative overflow-hidden">
+            <img src="background-service.png" class="absolute inset-0 w-full h-full object-cover" alt="bgService">
+            <div class="overlay absolute w-full h-full bg-black z-10 opacity-80"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center z-20 text-white">
+                <h1 class=" text-2xl text-center md:text-5xl font-semibold mb-2  tracking-wide opacity-70">Software and
+                    Business Solution
+                    Service</h1>
+                <h2 class="md:text-md  tracking-wide mt-4 md:text-2xl opacity-70">இEternity provide software</h2>
+                <p
+                    class="text-sm max-sm:mx-4  text-center hover:animate-none  transition-all hover:cursor-pointer hover:scale-105 native-bg  hover:bg-blue-500 p-3 rounded-3xl tracking-wide mt-6">
+                    Tailored software solution for every business</p>
+            </div>
+        </div>
+    </header>
+    <header
+        class="explainaton p-8 md:pb-15 grid grid-cols-1   md:grid-cols-2 justify-center  items-center content-center lg:px-10   ">
+
+
+        <div class="left-side w-full ">
+            <h3 class="text-xl md:text-2xl   text-[#3359B5] font-semibold">OUR SERVICE</h3>
+
+            <h2 class=" text-2xl md:mt-2 md:text-5xl font-semibold">
+                We provide best business solutions
+            </h2>
+
+            <p class="mt-5">
+                Our saas applications are delivered over the internet, removing the need for installation or heavy
+                hardware. Users simply log in through a browser and start working, while the provider takes care of all
+                maintenance, updates, security, and scaling behind the scenes. With flexible subscription pricing and
+                easy
+                accessibility, SaaS helps businesses reduce upfront costs, improve collaboration, and adapt quickly
+                to changing needs.
+            </p>
+
+            <div class="button-div my-10  max-sm:space-y-5 md:mt-10 grid md:grid-cols-2 md:gap-10">
+
+                <button
+                    class="border border-blue-900 cursor-pointer bg-blue-800 text-white hover:bg-white hover:text-blue-800 px-6 py-4  font-semibold rounded-lg transition-all">
+                    Contact-Us
+                </button>
+                <button
+                    class="border border-blue-900 cursor-pointer text-blue-900 hover:text-white hover:bg-blue-800 px-6 py-4 font-semibold rounded-lg transition-all">
+                    Know More
+                </button>
+            </div>
+        </div>
+
+
+        <div class="right-side  md:max-w-2xl flex justify-end">
+
+            <img src="productivity.jpg" alt="productivity" class="object-cover  mx-auto">
+
+        </div>
+
+    </header>
+    <header class="all-services p-5 text-center bg-blue-100">
+        <div class="title-holder py-10">
+            <h2 class="text-xl md:text-2xl font-semibold  text-red-500  opacity-65">SEE ALL SERVICES</h2>
+            <h1 class="text-2xl md:text-3xl font-semibold pt-3 pb-5 common-color ">See our all services</h1>
+            <p class="tracking-wide ">we provide software as a service for business solution <br> and we also provide
+                automation tools for
+                business
+            </p>
+        </div>
+        <div class="service-card-holder  max-sm:p-5
+            grid 
+            grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:flex lg:flex-row  lg:flex-wrap lg:item-center
+            justify-center 
+            items-start 
+            gap-6 
+            w-full 
+            py-4">
+            @for(item of serviceData() ;track item.title){
+            <div class="service-card 
+            md:w-100 w-full
+            border border-gray-300 
+            rounded-xl 
+            p-6 
+            shadow-sm 
+            hover:shadow-md 
+            transition-shadow 
+            flex flex-col 
+            items-center 
+            text-center 
+            bg-white 
+            space-y-4">
+
+                <img [src]="item.icon" [alt]="item.title" class="w-16 h-16 object-contain" />
+
+                <h3 class="service-title text-lg font-semibold text-red-500 tracking-wide ">
+                    {{item.title}}
+                </h3>
+
+                <p class="service-details common-color text-sm  leading-relaxed tracking-wide">
+                    {{item.description}}
+                </p>
+
+            </div>
+
+            }
+        </div>
+    </header>
+    <hr>
+    <header class="student-integration-program text-center py-10 ">
+        <div class="title-holder py-5 max-sm:px-3">
+            <h2 class="text-xl md:text-2xl font-semibold  text-red-500  opacity-65">SUPPORT OPEN SOURCE</h2>
+            <h1 class="text-2xl md:text-4xl font-semibold pt-3 pb-5 common-color ">இEternity Student Learning Program
+                ESLP</h1>
+            <p class="tracking-wide  ">we offering student learning program for final year students <br> including open
+                source programs and technology
+            </p>
+
+        </div>
+        <div
+            class="student-intern-displayer my-20 px-5 md:px-20 flex flex-wrap lg:grid lg:grid-cols-2  items-center  place-content-between w-full  ">
+            <div class="left ">
+                <div class="flex mb-4 gap-2 justify-end">
+                    <p-button (onClick)="active = '0'" [rounded]="true" label="1" styleClass="w-8 h-8 p-0"
+                        [outlined]="active !== '0'" />
+                    <p-button (onClick)="active = '1'" [rounded]="true" label="2" styleClass="w-8 h-8 p-0"
+                        [outlined]="active !== '1'" />
+                    <p-button (onClick)="active = '2'" [rounded]="true" label="3" styleClass="w-8 h-8 p-0"
+                        [outlined]="active !== '2'" />
+                </div>
+
+                <p-accordion [(value)]="active">
+                    @for(item of accordionData(); track item.value){
+                    <p-accordion-panel [value]="item.value">
+                        <p-accordion-header>
+                            <h1 class="md:text-2xl ">{{item.title}}</h1>
+                        </p-accordion-header>
+                        <p-accordion-content>
+                            <p class="m-0 text-left tracking-wide">
+                                {{item.description}}
+                            </p>
+                        </p-accordion-content>
+                    </p-accordion-panel>
+                    }
+                </p-accordion>
+                <div class="text-start my-10 ">
+                    <button
+                        class="native-bg  py-4 px-5 text-white font-semibold rounded-xl shadow-lg cursor-pointer transition-all hover:scale-105">Register
+                        Now !</button>
+                </div>
+            </div>
+            <div class="right max-sm:mt-4  w-full  flex  justify-center lg:justify-end  ">
+                <img src="career-girl.jpg" alt="career-girl" class="   w-100   rounded-2xl md:max-w-sm ">
+            </div>
+        </div>
+
+    </header>
+    <hr>
+    <section class="relative bg-linear-to-br from-indigo-50 via-blue-50 to-white py-16 sm:py-24 overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-200/30 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+            <!-- Title Section -->
+            <div class="text-center mb-16">
+                <div class="inline-block mb-4">
+                    <span
+                        class="text-sm sm:text-base font-bold text-red-500 bg-red-50 px-6 py-2 rounded-full border border-red-200">
+                        R & D
+                    </span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Research & <span
+                        class="text-transparent bg-clip-text bg-linear-to-r  bg-[#3359B5]">Development</span>
+                </h1>
+                <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We engage in research and development to create innovative software solutions and automation tools
+                    that optimize business processes and drive operational efficiency.
+                </p>
+            </div>
+
+            <!-- Tabs Section -->
+            <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-100 p-6 sm:p-8 lg:p-10">
+                <p-tabs value="0">
+                    <!-- Tab Headers -->
+                    <div class="flex justify-center mb-8">
+                        <p-tablist class="flex flex-wrap justify-center gap-3">
+                            <p-tab value="0" class="group">
+                                <div class="flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300">
+                                    <i class="pi pi-microchip text-lg"></i>
+                                    <span class="font-semibold text-sm sm:text-base">AI Research</span>
+                                </div>
+                            </p-tab>
+                            <p-tab value="1" class="group">
+                                <div class="flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300">
+                                    <i class="pi pi-cog text-lg"></i>
+                                    <span class="font-semibold text-sm sm:text-base">Automation</span>
+                                </div>
+                            </p-tab>
+                            <p-tab value="2" class="group">
+                                <div class="flex items-center gap-2 px-6 py-3 rounded-lg transition-all duration-300">
+                                    <i class="pi pi-shield text-lg"></i>
+                                    <span class="font-semibold text-sm sm:text-base">Security</span>
+                                </div>
+                            </p-tab>
+                        </p-tablist>
+                    </div>
+
+                    <!-- Tab Panels -->
+                    <p-tabpanels>
+                        <!-- AI Panel -->
+                        <p-tabpanel value="0">
+                            <div class="grid md:grid-cols-2 gap-8 items-center">
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="shrink-0 w-14 h-14 bg-linear-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+                                            <i class="pi pi-microchip text-white text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Artificial Intelligence
+                                            </h3>
+                                            <p class="text-gray-600 leading-relaxed">
+                                                We focus on advanced research and development in artificial intelligence
+                                                to create intelligent solutions that enhance business operations and
+                                                decision-making.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-4 pl-18">
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Machine learning models for predictive analytics
+                                            </p>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Automation frameworks for intelligent workflows</p>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Data-driven systems for efficient operations</p>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Scalable AI solutions for modern businesses</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-linear-to-br from-purple-100 to-indigo-100 rounded-2xl p-8 border border-purple-200">
+                                    <div class="space-y-4">
+                                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md">
+                                            <h4 class="font-bold text-gray-800 mb-2">Innovation Focus</h4>
+                                            <p class="text-sm text-gray-600">Continuous experimentation and innovation
+                                                in AI-powered tools</p>
+                                        </div>
+                                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md">
+                                            <h4 class="font-bold text-gray-800 mb-2">Real-World Solutions</h4>
+                                            <p class="text-sm text-gray-600">Adaptive systems that address practical
+                                                business challenges</p>
+                                        </div>
+                                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md">
+                                            <h4 class="font-bold text-gray-800 mb-2">Measurable Value</h4>
+                                            <p class="text-sm text-gray-600">Reliable, scalable solutions delivering
+                                                tangible results</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </p-tabpanel>
+
+                        <!-- Automation Panel -->
+                        <p-tabpanel value="1">
+                            <div class="grid md:grid-cols-2 gap-8 items-center">
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="shrink-0 w-14 h-14 bg-linear-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
+                                            <i class="pi pi-cog text-white text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Advanced Automation</h3>
+                                            <p class="text-gray-600 leading-relaxed">
+                                                We specialize in research and development focused on advanced automation
+                                                technologies that streamline business workflows and eliminate manual
+                                                effort.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-4 pl-18">
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Intelligent workflow automation systems</p>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Precision task execution with reliability</p>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Real-time monitoring and process optimization</p>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Cost reduction through operational efficiency</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-linear-to-br from-blue-100 to-cyan-100 rounded-2xl p-8 border border-blue-200">
+                                    <div class="space-y-4">
+                                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md">
+                                            <h4 class="font-bold text-gray-800 mb-2">Process Analysis</h4>
+                                            <p class="text-sm text-gray-600">Deep analysis of operational challenges and
+                                                workflows</p>
+                                        </div>
+                                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md">
+                                            <h4 class="font-bold text-gray-800 mb-2">Smart Integration</h4>
+                                            <p class="text-sm text-gray-600">ML-powered automation with seamless
+                                                integration</p>
+                                        </div>
+                                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md">
+                                            <h4 class="font-bold text-gray-800 mb-2">Long-term Efficiency</h4>
+                                            <p class="text-sm text-gray-600">Sustainable solutions driving continuous
+                                                innovation</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </p-tabpanel>
+
+                        <!-- Security Panel -->
+                        <p-tabpanel value="2">
+                            <div class="grid md:grid-cols-2 gap-8 items-center">
+                                <div class="space-y-6">
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="shrink-0 w-14 h-14 bg-linear-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg">
+                                            <i class="pi pi-shield text-white text-2xl"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Web Security Protocols
+                                            </h3>
+                                            <p class="text-gray-600 leading-relaxed">
+                                                We focus on research and development in cutting-edge web security,
+                                                creating AI-driven systems that protect digital platforms from evolving
+                                                threats.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-4 pl-18">
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Vulnerability identification and threat monitoring
+                                            </p>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Real-time adaptive defense mechanisms</p>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">ML-powered threat analytics and detection</p>
+                                        </div>
+                                        <div class="flex items-start gap-3">
+                                            <i class="pi pi-check-circle text-green-500 mt-1"></i>
+                                            <p class="text-gray-700">Data integrity and system resilience</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-linear-to-br from-emerald-100 to-teal-100 rounded-2xl p-8 border border-emerald-200">
+                                    <div class="space-y-4">
+                                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md">
+                                            <h4 class="font-bold text-gray-800 mb-2">Advanced Protection</h4>
+                                            <p class="text-sm text-gray-600">Comprehensive security frameworks for
+                                                digital platforms</p>
+                                        </div>
+                                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md">
+                                            <h4 class="font-bold text-gray-800 mb-2">Risk Minimization</h4>
+                                            <p class="text-sm text-gray-600">Automated detection preventing unauthorized
+                                                access</p>
+                                        </div>
+                                        <div class="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-md">
+                                            <h4 class="font-bold text-gray-800 mb-2">Resilient Systems</h4>
+                                            <p class="text-sm text-gray-600">Safe, reliable digital environments for
+                                                businesses</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </p-tabpanel>
+                    </p-tabpanels>
+                </p-tabs>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="mt-16 text-center">
+                <div class=" bg-[#3359B5] rounded-2xl p-8 sm:p-12 shadow-2xl">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        Ready to Innovate with Us?
+                    </h3>
+                    <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
+                        Partner with our R&D team to develop cutting-edge solutions tailored to your business needs
+                    </p>
+                    <button
+                        class="px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                        Start a Project
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
