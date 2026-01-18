@@ -1,7 +1,7 @@
-import { Component, signal, computed } from '@angular/core';
-import { CarouselModule } from 'primeng/carousel'
-import { Contact } from '../contact/contact';
+import { Component, computed, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { CarouselModule } from 'primeng/carousel';
+import { Contact } from '../contact/contact';
 
 
 @Component({
@@ -14,26 +14,26 @@ export class Home {
 
   cardData = signal([
     {
-      img: "hpr.jpg",
-      alt: "helpingRobo",
+      img: "https://unpkg.com/lucide-static@latest/icons/settings-2.svg",
+      alt: "workflowAutomation",
       title: "We provide workflow automation",
       description: "Automate repetitive tasks with intelligent process flows.Reduce manual effort and eliminate errors. Improve overall efficiency across your business operations."
     },
     {
-      img: "rbwk.jpg",
-      alt: "roboCreatingSoftware",
+      img: "https://unpkg.com/lucide-static@latest/icons/layout.svg",
+      alt: "webSolutions",
       title: "We create web business solution software",
       description: "Build scalable and modern web applications tailored to your business needs. Streamline customer interaction through custom digital tools. Deliver smooth experiences on any device."
     },
     {
-      img: "rgm.jpg",
-      alt: "revenueGrowthMachine",
+      img: "https://unpkg.com/lucide-static@latest/icons/trending-up.svg",
+      alt: "revenueGrowth",
       title: "We help increase revenue with business software",
       description: "Optimize business performance using data-driven tools. Automate sales, billing, and customer engagement processes. Unlock new growth opportunities with smart technology."
     },
     {
-      img: "invma.jpg",
-      alt: "inventoryManagement",
+      img: "https://unpkg.com/lucide-static@latest/icons/package.svg",
+      alt: "inventoryERP",
       title: "We provide inventory and ERP software solutions",
       description: "Track stock levels in real-time with complete accuracy. Integrate purchasing, sales, and accounting under one system. Improve control over your entire business workflow."
     }
@@ -76,21 +76,16 @@ export class Home {
   responsiveOptions = [
     {
       breakpoint: '1400px',
-      numVisible: 5,
-      numScroll: 1
-    },
-    {
-      breakpoint: '991px',
       numVisible: 3,
       numScroll: 1
     },
     {
-      breakpoint: '768px',
+      breakpoint: '1024px',
       numVisible: 2,
       numScroll: 1
     },
     {
-      breakpoint: '560px',
+      breakpoint: '768px',
       numVisible: 1,
       numScroll: 1
     }

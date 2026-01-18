@@ -1,51 +1,9 @@
-<nav class=" flex  justify-between text-xl sticky top-0  z-50 bg-[#FAFAFA] common-color     items-center  p-4 px-6">
-  <div class="flex items-center gap-3">
-    <!-- CSS Logo -->
-    <a routerLink="" class="flex items-center gap-3 group cursor-pointer">
-      <div class="relative">
-        <!-- Icon Container -->
-        
-      </div>
-      <!-- Text Logo -->
-      <div class="flex flex-col">
-        <span class="text-2xl font-bold text-[#1C4D8D] group-hover:text-[#3459b6] transition-all duration-300">
-          இEternity
-        </span>
-        <span class="text-xs text-gray-500 font-medium tracking-wider -mt-1">CORPORATION</span>
-      </div>
-    </a>
-  </div>
-  <ul class="hidden sm:flex list-none   space-x-8 ">
-    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="">Home</a></li>
-    <li routerLinkActive="active"><a routerLink="/service">Service</a></li>
-    <li routerLinkActive="active"><a routerLink="/career">Career</a></li>
-    <li routerLinkActive="active"><a routerLink="/about">About</a></li>
-  </ul>
-  <div>
-    <button type="button" class="hidden sm:block  common-btn">Contact Now</button>
-    <button type="button" class=" block sm:hidden text-3xl" (click)="setToggle()">
-      @if(toggler){
-      <span>x</span>
-      }@else{
-      <span>☰</span>
-      }
-    </button>
-  </div>
-</nav>
+<app-navbar></app-navbar>
 
-@if(toggler){
-<ul class="sm:hidden sticky top-15 z-50 flex flex-col p-4 space-y-4 bg-white  shadow-md text-lg">
-  <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a routerLink="">Home</a></li>
-  <li routerLinkActive="active"><a routerLink="/service">Service</a></li>
-  <li routerLinkActive="active"><a routerLink="/career">Career</a></li>
-  <li routerLinkActive="active"><a routerLink="/about">About</a></li>
-  <button class="common-btn  w-full" routerLink="/" fragment="contact">Contact Now</button>
-</ul>
-}
-
-<main class="  mx-auto ">
+<main class="mx-auto bg-white">
   <router-outlet />
 </main>
+
 <app-footer />
 
 <!-- Copyright Section -->
@@ -56,7 +14,7 @@
       <p class="text-gray-400 text-sm text-center md:text-left">
         © 2026 <span class="text-white font-semibold">இEternity Corporation</span>. All rights reserved.
       </p>
-      
+
       <!-- Legal Links -->
       <div class="flex items-center gap-6 text-sm">
         <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">

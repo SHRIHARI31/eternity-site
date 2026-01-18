@@ -1,0 +1,67 @@
+<nav class="flex justify-between text-xl sticky top-0 z-50 bg-white common-color items-center p-4 px-6 shadow-sm">
+    <div class="flex items-center gap-3">
+        <!-- Logo -->
+        <a routerLink="" class="flex items-center gap-3 group cursor-pointer">
+            <div class="flex flex-col">
+                <span
+                    class="text-2xl font-bold text-eternity group-hover:text-eternity-light transition-all duration-300">
+                    இEternity
+                </span>
+                <span class="text-xs text-gray-500 font-medium tracking-wider -mt-1 uppercase">Corporation</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden sm:flex list-none space-x-8">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <a routerLink="/" class="hover:text-eternity-light transition-colors">Home</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/service" class="hover:text-eternity-light transition-colors">Service</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/career" class="hover:text-eternity-light transition-colors">Career</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/about" class="hover:text-eternity-light transition-colors">About</a>
+        </li>
+    </ul>
+
+    <div class="flex items-center gap-4">
+        <button type="button" class="hidden sm:block common-btn">Contact Now</button>
+
+        <!-- Mobile Toggle -->
+        <button type="button" class="block sm:hidden text-3xl focus:outline-none" (click)="setToggle()">
+            @if(toggler){
+            <span class="pi pi-times"></span>
+            }@else{
+            <span class="pi pi-bars"></span>
+            }
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+@if(toggler){
+<div
+    class="sm:hidden fixed inset-x-0 top-16 z-40 bg-white shadow-xl border-t border-gray-100 animate-in slide-in-from-top duration-300">
+    <ul class="flex flex-col p-6 space-y-4 text-lg">
+        <li (click)="setToggle()">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                class="block py-2">Home</a>
+        </li>
+        <li (click)="setToggle()">
+            <a routerLink="/service" routerLinkActive="active" class="block py-2">Service</a>
+        </li>
+        <li (click)="setToggle()">
+            <a routerLink="/career" routerLinkActive="active" class="block py-2">Career</a>
+        </li>
+        <li (click)="setToggle()">
+            <a routerLink="/about" routerLinkActive="active" class="block py-2">About</a>
+        </li>
+        <button class="common-btn w-full mt-4" routerLink="/" fragment="contact" (click)="setToggle()">Contact
+            Now</button>
+    </ul>
+</div>
+}

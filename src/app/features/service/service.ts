@@ -28,6 +28,72 @@ export class Service {
     }
   ]);
 
+  randdData = signal([
+    {
+      value: '0',
+      label: 'AI Research',
+      tabIcon: 'pi pi-microchip',
+      iconGradient: 'from-purple-500 to-indigo-600',
+      title: 'Artificial Intelligence',
+      description: 'We focus on advanced research and development in artificial intelligence to create intelligent solutions that enhance business operations and decision-making.',
+      checkpoints: [
+        'Machine learning models for predictive analytics',
+        'Automation frameworks for intelligent workflows',
+        'Data-driven systems for efficient operations',
+        'Scalable AI solutions for modern businesses'
+      ],
+      cardGradient: 'from-purple-100 to-indigo-100',
+      cardBorder: 'border-purple-200',
+      features: [
+        { title: 'Innovation Focus', desc: 'Continuous experimentation and innovation in AI-powered tools' },
+        { title: 'Real-World Solutions', desc: 'Adaptive systems that address practical business challenges' },
+        { title: 'Measurable Value', desc: 'Reliable, scalable solutions delivering tangible results' }
+      ]
+    },
+    {
+      value: '1',
+      label: 'Automation',
+      tabIcon: 'pi pi-cog',
+      iconGradient: 'from-blue-500 to-cyan-600',
+      title: 'Advanced Automation',
+      description: 'We specialize in research and development focused on advanced automation technologies that streamline business workflows and eliminate manual effort.',
+      checkpoints: [
+        'Intelligent workflow automation systems',
+        'Precision task execution with reliability',
+        'Real-time monitoring and process optimization',
+        'Cost reduction through operational efficiency'
+      ],
+      cardGradient: 'from-blue-100 to-cyan-100',
+      cardBorder: 'border-blue-200',
+      features: [
+        { title: 'Process Analysis', desc: 'Deep analysis of operational challenges and workflows' },
+        { title: 'Smart Integration', desc: 'ML-powered automation with seamless integration' },
+        { title: 'Long-term Efficiency', desc: 'Sustainable solutions driving continuous innovation' }
+      ]
+    },
+    {
+      value: '2',
+      label: 'Security',
+      tabIcon: 'pi pi-shield',
+      iconGradient: 'from-emerald-500 to-teal-600',
+      title: 'Web Security Protocols',
+      description: 'We focus on research and development in cutting-edge web security, creating AI-driven systems that protect digital platforms from evolving threats.',
+      checkpoints: [
+        'Vulnerability identification and threat monitoring',
+        'Real-time adaptive defense mechanisms',
+        'ML-powered threat analytics and detection',
+        'Data integrity and system resilience'
+      ],
+      cardGradient: 'from-emerald-100 to-teal-100',
+      cardBorder: 'border-emerald-200',
+      features: [
+        { title: 'Advanced Protection', desc: 'Comprehensive security frameworks for digital platforms' },
+        { title: 'Risk Minimization', desc: 'Automated detection preventing unauthorized access' },
+        { title: 'Resilient Systems', desc: 'Safe, reliable digital environments for businesses' }
+      ]
+    }
+  ]);
+  
   serviceData = signal([
     {
       icon: "https://unpkg.com/lucide-static@latest/icons/cloud.svg",

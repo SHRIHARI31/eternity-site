@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "primeicons/primeicons.css";
 
+html, body {
+    @apply bg-white;
+}
+
 @theme {
     /* Define Brand Colors */
     --color-eternity: #1C4D8D;
@@ -27,7 +31,7 @@
         @apply bg-eternity text-white p-3 transition-all rounded-3xl shadow-black shadow-sm cursor-pointer hover:bg-eternity-light;
     }
     .active {
-        @apply text-eternity-dark font-bold;
+        @apply text-eternity-dark font-bold border-b-2 border-eternity-light;
     }
     .light-color {
         @apply bg-eternity-bg;
@@ -38,10 +42,7 @@
     .heading-color {
         @apply text-heading;
     }
-    .deep-bg {
-        @apply bg-eternity;
-    }
     .native-bg {
-        @apply bg-[#3359B5];
+        @apply bg-eternity-light;
     }
 }

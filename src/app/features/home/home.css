@@ -1,6 +1,6 @@
 .right > div {
     padding: 10px;
-    background-color: #1C4D8D;
+    background-color: var(--color-eternity);
     margin: 5px;
     border-radius: 30px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
