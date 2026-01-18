@@ -45,20 +45,23 @@
 <!-- Mobile Menu -->
 @if(toggler){
 <div
-    class="sm:hidden fixed inset-x-0 top-16 z-40 bg-white shadow-xl border-t border-gray-100 animate-in slide-in-from-top duration-300">
-    <ul class="flex flex-col p-6 space-y-4 text-lg">
+    class="sm:hidden fixed inset-x-0 top-16 z-40 bg-eternity-bg shadow-xl border-t border-gray-100 animate-in slide-in-from-top duration-300">
+    <ul class="flex flex-col p-6 space-y-4 text-lg font-medium common-color">
         <li (click)="setToggle()">
             <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                class="block py-2">Home</a>
+                class="block py-2 hover:text-eternity-light transition-colors">Home</a>
         </li>
         <li (click)="setToggle()">
-            <a routerLink="/service" routerLinkActive="active" class="block py-2">Service</a>
+            <a routerLink="/service" routerLinkActive="active"
+                class="block py-2 hover:text-eternity-light transition-colors">Service</a>
         </li>
         <li (click)="setToggle()">
-            <a routerLink="/career" routerLinkActive="active" class="block py-2">Career</a>
+            <a routerLink="/career" routerLinkActive="active"
+                class="block py-2 hover:text-eternity-light transition-colors">Career</a>
         </li>
         <li (click)="setToggle()">
-            <a routerLink="/about" routerLinkActive="active" class="block py-2">About</a>
+            <a routerLink="/about" routerLinkActive="active"
+                class="block py-2 hover:text-eternity-light transition-colors">About</a>
         </li>
         <button class="common-btn w-full mt-4" routerLink="/" fragment="contact" (click)="setToggle()">Contact
             Now</button>
