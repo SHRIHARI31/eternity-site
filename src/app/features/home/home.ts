@@ -1,6 +1,7 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { CarouselModule } from 'primeng/carousel';
+import { SeoService } from '../../shared/services/seo.service';
 import { Contact } from '../contact/contact';
 
 
@@ -12,6 +13,15 @@ import { Contact } from '../contact/contact';
   styleUrl: './home.css',
 })
 export class Home {
+  private seo = inject(SeoService);
+
+  constructor() {
+    this.seo.updateSeo(
+      'Eternity - Custom Software Solutions & Web Development',
+      'Eternity provides high-quality custom software solutions, workflow automation, web business solutions, and ERP software to help businesses grow and streamline operations.',
+      'software development, workflow automation, web solutions, ERP software, business optimization'
+    );
+  }
 
   cardData = signal([
     {

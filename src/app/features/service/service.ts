@@ -1,8 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { RouterLink } from "@angular/router";
 import { AccordionModule } from 'primeng/accordion';
 import { Button } from 'primeng/button';
 import { TabsModule } from 'primeng/tabs';
-import { RouterLink } from "@angular/router";
+import { SeoService } from '../../shared/services/seo.service';
+
 @Component({
   selector: 'app-service',
   imports: [AccordionModule, Button, TabsModule, RouterLink],
@@ -10,6 +12,15 @@ import { RouterLink } from "@angular/router";
   styleUrl: './service.css',
 })
 export class Service {
+  private seo = inject(SeoService);
+
+  constructor() {
+    this.seo.updateSeo(
+      'Our Services - Eternity Software Solutions',
+      'Discover Eternity\'s software solutions including cloud services, web development, mobile apps, UI/UX design, cyber security, and DevOps automation.',
+      'software services, cloud computing, web development, mobile apps, cyber security, devops, eternity services'
+    );
+  }
   active = '0'
   accordionData = signal([
     {

@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { SeoService } from '../../shared/services/seo.service';
 
 @Component({
   selector: 'app-career',
@@ -8,6 +9,15 @@ import { RouterLink } from "@angular/router";
   styleUrl: './career.css',
 })
 export class Career {
+  private seo = inject(SeoService);
+
+  constructor() {
+    this.seo.updateSeo(
+      'Careers - Join Our Team at Eternity',
+      'Explore career opportunities at Eternity. We are looking for Full Stack Developers, UI/UX Designers, DevOps Engineers, and Product Managers to join our innovative team.',
+      'eternity careers, software jobs, developer jobs tamil nadu, hiring designers, devops opportunities'
+    );
+  }
 features = signal( [
   {
     title: 'Compassion',

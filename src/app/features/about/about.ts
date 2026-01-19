@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { SeoService } from '../../shared/services/seo.service';
 
 @Component({
   selector: 'app-about',
@@ -8,6 +9,15 @@ import { RouterLink } from "@angular/router";
   styleUrl: './about.css',
 })
 export class About {
+  private seo = inject(SeoService);
+
+  constructor() {
+    this.seo.updateSeo(
+      'About Us - The Story Behind Eternity',
+      'Learn more about Eternity, our values of innovation, integrity, and excellence. We have over 10 years of experience delivering projects globally.',
+      'eternity software, about eternity, software company values, innovation, technology excellence'
+    );
+  }
   stats = [
     { label: 'Years of Excellence', value: '10+' },
     { label: 'Global Clients', value: '200+' },
