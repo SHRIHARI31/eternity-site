@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
+import { Home } from './features/home/home';
 
 export const routes: Routes = [
 
     {
         path:"",
         pathMatch:"full",
-        loadComponent: () => import('./features/home/home').then(m => m.Home),  
+        component:Home
     },{
         path:"service",
         loadComponent: () => import('./features/service/service').then(m => m.Service)

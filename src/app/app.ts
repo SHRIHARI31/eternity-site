@@ -28,7 +28,7 @@ export class App {
         if (isPlatformBrowser(this.platformId)) {
           setTimeout(() => {
             this.isLoading.set(false);
-          }, 1000);
+          }, 500);
         } else {
           this.isLoading.set(false);
         }
