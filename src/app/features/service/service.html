@@ -40,14 +40,14 @@
 
                 <!-- Action Buttons -->
                 <div class="flex flex-col sm:flex-row gap-5 w-full justify-center items-center">
-                    <button
-                        class="group relative px-8 py-4 bg-white text-eternity font-bold rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer min-w-[160px]">
+                    <button  routerLink="/contact"
+                        class="group relative px-8 py-4  bg-white text-eternity font-bold rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden cursor-pointer min-w-[160px]">
                         <span class="relative z-10 flex items-center justify-center gap-2">
                             Get Started
                             <i class="pi pi-arrow-right text-sm"></i>
                         </span>
                     </button>
-                    <button
+                    <button routerLink="/contact"
                         class="group px-8 py-4 bg-white/10 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/20 backdrop-blur-sm transition-all duration-300 cursor-pointer min-w-[160px] hover:-translate-y-1">
                         Contact Us
                     </button>
@@ -82,12 +82,12 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4">
-                <button
-                    class="group px-8 py-3.5 bg-eternity text-white font-semibold rounded-xl shadow-lg hover:bg-eternity-dark hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2">
+                <button routerLink="/contact"
+                    class="group px-8 py-3.5 bg-eternity cursor-pointer text-white font-semibold rounded-xl shadow-lg hover:bg-eternity-dark hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2">
                     Contact Us
                     <i class="pi pi-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
                 </button>
-                <button
+                <button routerLink="/about"
                     class="group px-8 py-3.5 bg-white text-eternity border border-gray-200 font-semibold rounded-xl hover:border-eternity hover:bg-blue-50 transition-all duration-300 flex items-center justify-center">
                     Know More
                 </button>
@@ -174,7 +174,7 @@
                         [outlined]="active !== '2'" />
                 </div>
 
-                <p-accordion [(value)]="active">
+                <p-accordion [(value)]="active" class="" >
                     @for(item of accordionData(); track item.value){
                     <p-accordion-panel [value]="item.value">
                         <p-accordion-header>
@@ -189,8 +189,8 @@
                     }
                 </p-accordion>
                 <div class="text-start my-4 mx-2 sm:mx-0 sm:my-10 ">
-                    <button
-                        class="native-bg  py-3 px-2.5 sm:py-4 sm:px-5 text-white font-semibold rounded-xl shadow-lg cursor-pointer transition-all hover:scale-105">Register
+                    <button routerLink="/contact"
+                        class="native-bg   py-3 px-2.5 sm:py-4 sm:px-5 text-white font-semibold rounded-xl shadow-lg cursor-pointer transition-all hover:scale-105">Register
                         Now !</button>
                 </div>
             </div>
@@ -300,8 +300,8 @@
                     <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
                         Partner with our R&D team to develop cutting-edge solutions tailored to your business needs
                     </p>
-                    <button
-                        class="px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <button routerLink="/contact"
+                        class="px-8 py-4 bg-white cursor-pointer text-blue-600 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
                         Start a Project
                     </button>
                 </div>

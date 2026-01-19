@@ -2,9 +2,10 @@ import { Component, signal } from '@angular/core';
 import { AccordionModule } from 'primeng/accordion';
 import { Button } from 'primeng/button';
 import { TabsModule } from 'primeng/tabs';
+import { RouterLink } from "@angular/router";
 @Component({
   selector: 'app-service',
-  imports: [AccordionModule, Button,TabsModule],
+  imports: [AccordionModule, Button, TabsModule, RouterLink],
   templateUrl: './service.html',
   styleUrl: './service.css',
 })

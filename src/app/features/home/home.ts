@@ -4,6 +4,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { Contact } from '../contact/contact';
 
 
+
 @Component({
   selector: 'app-home',
   imports: [CarouselModule, Contact, RouterLink],
@@ -54,16 +55,16 @@ export class Home {
   },
   {
     id: 3,
-    name: "Jordan Smith",
-    role: "DevOps Engineer",
-    avatar: "https://i.pravatar.cc/150?u=jordan",
-    quote: "Highly efficient components. The focus on performance and clean code is exactly what we needed."
+    name: "Praveen J",
+    role: "Architect",
+    avatar: "https://i.pravatar.cc/150?u=jhon",
+    quote: "The focus on performance and clean code is exactly what we needed."
   },
   {
     id: 4,
-    name: "Jordan Smith",
-    role: "DevOps Engineer",
-    avatar: "https://i.pravatar.cc/150?u=jordan",
+    name: "Thomas M",
+    role: "CEO of wayne entreprise",
+    avatar: "https://i.pravatar.cc/150?u=laura",
     quote: "Highly efficient components. The focus on performance and clean code is exactly what we needed."
   },
  { id: 5,
