@@ -1,6 +1,8 @@
-@if (isLoading()) {
+@if (isLoading() || isServer) {
 <app-loader />
-} @else {
+}
+
+@if (!isLoading() || isServer) {
 <app-navbar></app-navbar>
 
 <main class="mx-auto bg-white">

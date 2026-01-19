@@ -14,24 +14,27 @@ import { Loader } from "./shared/loader/loader";
 export class App {
   private router = inject(Router);
   private platformId = inject(PLATFORM_ID);
+  isServer = !isPlatformBrowser(this.platformId);
   isLoading = signal(true);
 
   constructor() {
     this.router.events.subscribe((event) => {
-      if (event instanceof NavigationStart) {
-        this.isLoading.set(true);
-      } else if (
-        event instanceof NavigationEnd ||
-        event instanceof NavigationCancel ||
-        event instanceof NavigationError
-      ) {
-        if (isPlatformBrowser(this.platformId)) {
+      if (isPlatformBrowser(this.platformId)) {
+        if (event instanceof NavigationStart) {
+          this.isLoading.set(true);
+        } else if (
+          event instanceof NavigationEnd ||
+          event instanceof NavigationCancel ||
+          event instanceof NavigationError
+        ) {
           setTimeout(() => {
             this.isLoading.set(false);
           }, 500);
-        } else {
-          this.isLoading.set(false);
         }
+      } else {
+        // Ensure that on the server, we end up in a non-loading state 
+        // for the content logic, but keep the signal true for the loader
+        this.isLoading.set(false);
       }
     });
   }
