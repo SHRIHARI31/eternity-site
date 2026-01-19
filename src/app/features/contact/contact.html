@@ -83,7 +83,7 @@
                             <div class="space-y-2">
                                 <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider">Your
                                     Name</label>
-                                <input type="text" placeholder="John Doe"
+                                <input type="text" placeholder="John Doe" formControlName="name"
                                     class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none text-slate-800 placeholder:text-gray-400">
                             </div>
 
@@ -91,7 +91,7 @@
                             <div class="space-y-2">
                                 <label
                                     class="text-sm font-semibold text-gray-700 uppercase tracking-wider">Organization</label>
-                                <input type="text" placeholder="Company Ltd."
+                                <input type="text" placeholder="Company Ltd." formControlName="org"
                                     class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none text-slate-800 placeholder:text-gray-400">
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                         <div class="space-y-2">
                             <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider">Email
                                 Address</label>
-                            <input type="email" placeholder="john@example.com"
+                            <input type="email" placeholder="john@example.com" formControlName="email"
                                 class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none text-slate-800 placeholder:text-gray-400">
                         </div>
 
@@ -116,7 +116,7 @@
                                         class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors cursor-pointer">
                                         <p-radioButton name="service" [value]="item.service" formControlName="service"
                                             [inputId]="item.id.toString()"></p-radioButton>
-                                        <label [for]="item.id"
+                                        <label [for]="item.id.toString()"
                                             class="cursor-pointer text-gray-700 font-medium capitalize flex-1">{{
                                             item.service.replace('-', ' ') }}</label>
                                     </div>
@@ -128,7 +128,7 @@
                         <!-- Message -->
                         <div class="space-y-2">
                             <label class="text-sm font-semibold text-gray-700 uppercase tracking-wider">Message</label>
-                            <textarea rows="4" placeholder="Tell us about your project..."
+                            <textarea rows="4" placeholder="Tell us about your project..." formControlName="message"
                                 class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none text-slate-800 placeholder:text-gray-400 resize-none"></textarea>
                         </div>
 

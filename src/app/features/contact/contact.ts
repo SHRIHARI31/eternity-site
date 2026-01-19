@@ -1,5 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MessageService } from 'primeng/api';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { SeoService } from '../../shared/services/seo.service';
 
@@ -8,10 +9,12 @@ import { SeoService } from '../../shared/services/seo.service';
   imports: [RadioButtonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
+  providers: []
 })
-
 export class Contact {
   private seo = inject(SeoService);
+  private fb = inject(FormBuilder);
+  private messageService = inject(MessageService);
 
   constructor() {
     this.seo.updateSeo(
@@ -20,16 +23,43 @@ export class Contact {
       'contact eternity, software development inquiry, join eternity, business software contact'
     );
   }
+
   categories = signal([
-    { id: 1, service: "software-service" }, { id: 2, service: "job-application" }, { id: 3, service: "internship-appication" }, { id: 4, service: "formal-enquire" }
-  ])
+    { id: 1, service: "software-service" },
+    { id: 2, service: "job-application" },
+    { id: 3, service: "internship-appication" },
+    { id: 4, service: "formal-enquire" }
+  ]);
 
-private fb = inject(FormBuilder)
+  myForm: FormGroup = this.fb.group({
+    name: ['', Validators.required],
+    org: [''],
+    email: ['', [Validators.required, Validators.email]],
+    service: ['software-service', Validators.required],
+    message: ['', Validators.required]
+  });
 
-myForm:FormGroup = this.fb.group({
-  service:[]
-})
-submitForm(){
+  submitForm() {
+    if (this.myForm.valid) {
+      console.log('Form Submitted:', this.myForm.value);
+      
+      this.messageService.add({ 
+        severity: 'success', 
+        summary: 'Message Received', 
+        detail: 'Thank you for reaching out! We will get back to you soon.',
+        life: 3000
+      });
 
-}
+      this.myForm.reset({
+        service: 'software-service'
+      });
+    } else {
+      this.messageService.add({ 
+        severity: 'warn', 
+        summary: 'Form Incomplete', 
+        detail: 'Please fill in all required fields.',
+        life: 3000
+      });
+    }
+  }
 }
