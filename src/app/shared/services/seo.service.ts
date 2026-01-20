@@ -47,9 +47,6 @@ export class SeoService {
     if (isPlatformBrowser(this.platformId)) {
       element.setAttribute('href', window.location.origin + window.location.pathname);
     } else {
-      // For SSR, we can't use window, so we construction it or leave it
-      // In many cases, it's better to just leave it for hydration to fix
-      // or use a base URL if known.
       element.setAttribute('href', this.baseUrl + (this.document.location.pathname || ''));
     }
   }
